@@ -1,0 +1,751 @@
+//!================ 1439 ========================
+@media (max-width: 1439px) {
+	.header {
+		&-menu {
+			&__nav {
+				margin-right: 73px;
+				margin-left: 174px;
+				&-list li:not(:nth-last-child(1)) {
+					margin-right: 26px;
+				}
+			}
+		}
+	}
+	.add {
+		&-wrapper {
+			padding: 0 120px;
+		}
+		&-form form {
+			display: flex;
+			justify-content: space-between;
+		}
+		&-form {
+			&-info {
+				&__name {
+					width: 630px;
+				}
+				&__phone {
+					width: 390px;
+				}
+			}
+		}
+		.userphone {
+			width: 390px;
+		}
+		.username {
+			width: 630px;
+		}
+	}
+	.footer {
+		&-wrapper {
+			padding: 0 120px;
+		}
+		&-info {
+			justify-content: space-between;
+			&__contacts {
+				margin: 0;
+			}
+			&__list ul:not(:nth-last-child(1)) {
+				margin-right: 60px;
+			}
+		}
+	}
+}
+//!================ / 1439 ========================
+@media (min-width: 1280px) {
+	.menu-close-btn {
+		display: none;
+	}
+	.menu-close-text {
+		display: none;
+	}
+	.header-main-menu__app {
+		display: none;
+	}
+	.advantages {
+		padding-left: 60px;
+		padding-right: 60px;
+		&-title {
+			margin-right: 169px;
+		}
+	}
+}
+//!================ 1279px ========================
+@media (max-width: 1279px) {
+	.header {
+		padding: 0;
+		&-burger {
+			position: absolute;
+			top: 25px;
+			left: 40px;
+			display: block;
+			position: relative;
+			width: 40px;
+			height: 40px;
+			&::after,
+			&::before {
+				content: "";
+				position: absolute;
+				width: 24px;
+				height: 2px;
+				background-color: #fff;
+				left: 8px;
+				right: 0;
+			}
+			&::after {
+				bottom: 14px;
+			}
+			&::before {
+				top: 14px;
+			}
+		}
+		&-content__app-btn {
+			margin-bottom: 40px;
+		}
+		&-main-menu {
+			&__logo {
+				left: 120px;
+			}
+			&__app {
+				position: absolute;
+				right: 40px;
+				top: 26px;
+				background-color: $blue1;
+				padding: 10px;
+				border-radius: 4px;
+				padding: 2px 9px 7px;
+				font-family: "BrutalType";
+				font-style: normal;
+				font-weight: normal;
+				font-size: 20px;
+				line-height: 150%;
+				&:hover {
+					color: $gray1;
+				}
+			}
+		}
+		&-menu {
+			padding-top: 0;
+			justify-content: start;
+			background-color: $black;
+			height: 100vh;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: -100%;
+			transition: all 0.5s;
+			&__nav {
+				position: absolute;
+				top: 130px;
+				left: 40px;
+				margin: 0;
+				&-list {
+					flex-direction: column;
+					font-size: 32px;
+					line-height: 130%;
+				}
+				&-list li {
+					padding-bottom: 40px;
+				}
+			}
+			&__login {
+				font-size: 32px;
+				line-height: 130%;
+				position: absolute;
+				bottom: 40px;
+				left: 40px;
+				&::after {
+					background: url(../img/system/white-profile.png) no-repeat
+						50% 50%;
+					background-size: cover;
+					content: "";
+					width: 40px;
+					height: 40px;
+					position: absolute;
+					right: -42px;
+					bottom: -3px;
+				}
+			}
+			&__logo {
+				margin-right: 573px;
+			}
+			&__app {
+				position: absolute;
+				right: 40px;
+				top: 26px;
+			}
+		}
+		&-menu.active {
+			left: 0;
+		}
+	}
+
+	.menu-close-btn {
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 25px;
+		left: 40px;
+		cursor: pointer;
+		z-index: 8;
+	}
+
+	.menu-close-btn::after,
+	.menu-close-btn::before {
+		content: "";
+		width: 24px;
+		height: 2px;
+		background-color: #fff;
+		position: absolute;
+		transform-origin: left;
+	}
+
+	.menu-close-btn::after {
+		transform: rotate(45deg);
+		right: 4px;
+		bottom: 27px;
+	}
+
+	.menu-close-btn::before {
+		transform: rotate(-45deg);
+		left: 12px;
+		top: 28px;
+	}
+
+	.menu-close-text {
+		position: absolute;
+		z-index: 8;
+		top: 0;
+		left: 0;
+		text-transform: capitalize;
+		top: 30px;
+		left: 84px;
+		cursor: pointer;
+	}
+	//? add class.scrolled when scrolling
+	.header.scrolled {
+		.header-burger {
+			&::after,
+			&::before {
+				content: "";
+				position: absolute;
+				width: 24px;
+				height: 2px;
+				background-color: #000;
+				left: 8px;
+			}
+		}
+	}
+	//? add class.scrolled.active when scrolling
+	.header.scrolled {
+		.header-menu.active {
+			border-bottom: none;
+			.header-menu__link {
+				color: $white;
+			}
+			.header-menu__login {
+				color: $white;
+
+				&::after {
+					background: url(../img/system/white-profile.png);
+				}
+			}
+		}
+	}
+
+	.header-menu.active {
+		.header-menu__login {
+			&:hover::after {
+				position: absolute;
+				right: -52px;
+				bottom: -13px;
+				background: url(../img/system/union.png) no-repeat;
+			}
+		}
+	}
+	.header-content {
+		&__wrapper {
+			padding: 0 40px;
+		}
+		&__title {
+			margin-bottom: 40px;
+		}
+	}
+	.more {
+		padding: 0 40px;
+	}
+	.more-item__content:not(:nth-child(3)) {
+		margin-right: 40px;
+	}
+	.more-item__content-content-img {
+		height: 240px;
+	}
+	.more-item__content-system-img {
+		top: 210px;
+	}
+	.advantages {
+		padding-left: 40px;
+		padding-right: 40px;
+		&-wrapper {
+			padding: 160px 40px;
+			flex-direction: column;
+		}
+		&-title {
+			margin-bottom: 82px;
+		}
+	}
+	.add {
+		&-wrapper {
+			padding: 0 40px;
+		}
+		&-form form {
+			justify-content: space-around;
+		}
+		&-form {
+			&-info {
+				justify-content: space-around;
+				&__name {
+					width: 630px;
+				}
+				&__phone {
+					width: 390px;
+				}
+			}
+		}
+	}
+	.footer {
+		&-info {
+			flex-direction: column;
+			padding-top: 80px;
+			&__contacts {
+				display: flex;
+				justify-content: space-around;
+				margin-bottom: 80px;
+			}
+			&__list {
+				justify-content: space-around;
+			}
+		}
+		&-end {
+			margin-top: 80px;
+			flex-wrap: wrap;
+			display: flex;
+			justify-content: space-around;
+			&-wrapper {
+				display: flex;
+				width: 100%;
+				justify-content: space-around;
+			}
+			&__networks {
+				margin-right: 96px;
+			}
+			&__department {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+//!========================= / 1279px =====================
+
+//!==========================1023px======================
+@media (max-width: 1023px) {
+	//*============= header ==========================
+	.header-content {
+		&__title h1 {
+			font-size: 42px;
+		}
+	}
+	//*============= / header ==========================
+
+	//*============= about ==========================
+	.about {
+		padding: 120px 0px;
+		&-subtitle {
+			padding: 0 40px;
+		}
+	}
+	.more-item__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		padding-left: 50px;
+	}
+	.more {
+		&-item {
+			flex-direction: column;
+			align-items: center;
+			&__content {
+				max-width: 688px;
+				display: flex;
+				&-title {
+					padding: 0px 32px 0px 0px;
+					margin-top: 32px;
+				}
+				&-subtitle {
+					padding: 0px 32px 0px 0px;
+					margin-bottom: 70px;
+				}
+				&-content-img {
+					min-width: 288px;
+					border-radius: 4px 0px 0px 4px;
+				}
+				&-system-img {
+					top: 32px;
+					left: 258px;
+				}
+				&-link a {
+					margin-left: 40px;
+				}
+			}
+		}
+	}
+	.more-item__content:not(:nth-child(3)) {
+		margin-bottom: 40px;
+		margin-right: 0;
+	}
+	.advantages {
+		&-wrapper {
+			padding: 120px 40px;
+		}
+	}
+	.advantages-popup {
+		&__body {
+			width: 688px;
+			margin-left: -344px;
+		}
+	}
+	.add {
+		&-header {
+			position: relative;
+			padding-top: 200px;
+			&__logo {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top: 80px;
+				left: 0;
+			}
+			&__info {
+				&-title {
+					font-size: 42px;
+				}
+			}
+		}
+		.form-btn {
+			margin-bottom: 80px;
+		}
+	}
+	.footer {
+		&-wrapper {
+			padding: 0 40px;
+		}
+	}
+}
+//!======================== / 1023px======================
+
+//!======================== 767px========================
+@media (max-width: 767px) {
+	//*=============  header ==========================
+	.header {
+		height: 78px;
+		&-burger {
+			left: 16px;
+			top: 7px;
+		}
+		&-content__app-btn {
+			font-size: 18px;
+		}
+	}
+	.header-main-menu {
+		&__app {
+			top: 10px;
+			right: 16px;
+			font-size: 18px;
+		}
+		&__logo {
+			margin-right: 0;
+			height: 40px;
+			width: 92px;
+			top: 7px;
+			left: 72px;
+		}
+	}
+	.header.scrolled .header-main-menu__logo {
+		width: 92px;
+		height: 40px;
+		background: url(../img/system/black-logo-767.png) no-repeat;
+	}
+	//?when add class .active
+	.header-menu.active {
+		.menu-close-btn {
+			top: 7px;
+			left: 16px;
+		}
+		.menu-close-text {
+			top: 12px;
+			left: 60px;
+			font-size: 18px;
+		}
+		.header-menu__app {
+			right: 16px;
+			top: 10px;
+			font-size: 18px;
+		}
+		.header-menu__nav {
+			top: 94px;
+			left: 30px;
+			&-list {
+				font-size: 28px;
+			}
+		}
+		.header-menu__login {
+			font-size: 28px;
+			left: 30px;
+		}
+	}
+
+	.header-content {
+		background-position: 20% 15%;
+
+		&__wrapper {
+			padding: 0 16px;
+		}
+		&__title {
+			margin-bottom: 32px;
+		}
+		&__title h1 {
+			font-size: 34px;
+		}
+		&__app-btn {
+			margin-bottom: 32px;
+		}
+	}
+	.about-title {
+		font-size: 28px;
+		padding: 0 17px;
+	}
+	.about-subtitle {
+		font-size: 24px;
+	}
+	.more {
+		padding: 0;
+		&-wrapper {
+			padding: 0 16px;
+		}
+		&-title {
+			padding-top: 160px;
+		}
+		&-item {
+			&__wrapper {
+				padding-left: 0;
+			}
+			&__content {
+				flex-direction: column;
+				max-width: 343px;
+				&-content-img {
+					height: 286px;
+					border-radius: 4px 4px 0px 0px;
+				}
+				&-system-img {
+					top: 255px;
+					left: 16px;
+				}
+				&-title {
+					font-size: 24px;
+					margin-top: 0;
+					padding: 40px 16px 0px;
+				}
+				&-subtitle {
+					font-size: 18px;
+					padding: 0px 16px 70px 16px;
+				}
+				&-link a {
+					font-size: 18px;
+					margin-left: 7px;
+				}
+				&-link {
+					bottom: 16px;
+				}
+				&-system-img img {
+					width: 40px;
+				}
+			}
+		}
+	}
+	.advantages {
+		padding-left: 16px;
+		padding-right: 16px;
+		&-wrapper {
+			padding: 120px 16px 120px 0px;
+		}
+		&-title {
+			font-size: 28px;
+		}
+		&-items {
+			&__content {
+				padding-left: 56px;
+				&-title {
+					font-size: 18px;
+				}
+				&-text {
+					font-size: 24px;
+				}
+				&-numbers {
+					font-size: 18px;
+				}
+				&-numbers span {
+					font-size: 40px;
+				}
+				&-link a {
+					font-size: 18px;
+				}
+				&-system-img img {
+					width: 40px;
+				}
+			}
+		}
+	}
+	.advantages-popup {
+		&__body {
+			padding: 0 16px;
+			height: 600px;
+			width: 300px;
+			margin-left: -150px;
+		}
+		&__content {
+			&-title {
+				font-size: 28px;
+				margin-left: 58px;
+			}
+			&-text {
+				font-size: 18px;
+			}
+			&-city {
+				font-size: 18px;
+				padding: 15px 5px 15px 5px;
+			}
+			&-numbers {
+				font-size: 18px;
+				padding: 20px 7px 20px 7px;
+			}
+			&-numbers span {
+				font-size: 37px;
+			}
+		}
+	}
+	.add {
+		&-wrapper {
+			padding: 0 16px;
+		}
+		&-header {
+			margin-bottom: 40px;
+			&__info {
+				&-title {
+					font-size: 34px;
+				}
+				&-text {
+					font-size: 18px;
+				}
+			}
+			&__logo {
+				width: 60px;
+				height: 60px;
+				top: 120px;
+			}
+		}
+		&-form-info {
+			&__name {
+				position: absolute;
+				top: 0;
+				left: 0;
+				margin: 0;
+			}
+			&__phone {
+				position: absolute;
+				top: 120px;
+				left: 0;
+				margin: 0;
+			}
+		}
+		&-form-info-wrapper {
+			position: relative;
+			height: 420px;
+		}
+		.username {
+			position: absolute;
+			top: 40px;
+			width: 100%;
+		}
+		.userphone {
+			position: absolute;
+			top: 160px;
+			width: 100%;
+			margin: 0;
+		}
+		.form-btn {
+			position: absolute;
+			top: 220px;
+		}
+	}
+	.footer {
+		&-wrapper {
+			padding: 0 16px;
+		}
+		&-info {
+			padding-top: 60px;
+			&__contacts {
+				flex-direction: column;
+				margin-bottom: 40px;
+				&-item-numbers {
+					font-size: 24px;
+				}
+				&-item-message {
+					font-size: 18px;
+				}
+			}
+			&__list ul:not(:nth-last-child(1)) {
+				margin-bottom: 40px;
+			}
+			&__list ul {
+				font-size: 18px;
+			}
+			&__list {
+				flex-direction: column;
+			}
+			&__list li:not(:nth-last-child(1)) {
+				margin-bottom: 16px;
+			}
+		}
+		&-end {
+			margin-top: 40px;
+			padding-right: 60px;
+			&__networks ul {
+				flex-direction: column;
+				margin: 0;
+			}
+			&__networks {
+				margin: 0;
+			}
+			&__networks li:not(:nth-last-child(1)) {
+				margin-bottom: 16px;
+			}
+			&__video ul {
+				flex-direction: column;
+			}
+			&__video li:not(:nth-last-child(1)) {
+				margin-bottom: 16px;
+			}
+		}
+	}
+}
+//!======================== / 767px======================
+
+//!======================== 375px======================
+// @media (max-width: 375px) {
+// 	.header-content {
+// 		background: url(../img/content/header-bg-768.svg) no-repeat;
+// 		background-position: cover;
+// 	}
+// }
+//!======================== / 375px======================
+// ================ / header ===================

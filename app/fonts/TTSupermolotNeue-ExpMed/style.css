@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'TT Supermolot Neue';
+    src: local('TT Supermolot Neue Expanded Medium'), local('TT-Supermolot-Neue-Expanded-Medium'),
+        url('TTSupermolotNeue-ExpMed.woff2') format('woff2'),
+        url('TTSupermolotNeue-ExpMed.woff') format('woff'),
+        url('TTSupermolotNeue-ExpMed.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}

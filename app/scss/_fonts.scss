@@ -1,0 +1,32 @@
+@font-face {
+	font-family: "TTRegular";
+	src: url("../fonts/TTSupermolotNeue-ExpRegular/TTSupermolotNeue-ExpRegular.woff2")
+			format("woff2"),
+		url("../fonts/TTSupermolotNeue-ExpRegular/TTSupermolotNeue-ExpRegular.woff")
+			format("woff"),
+		url("../fonts/TTSupermolotNeue-ExpRegular/TTSupermolotNeue-ExpRegular.ttf")
+			format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "BrutalType";
+	src: url("../fonts/BrutalType/BrutalType.woff2") format("woff2"),
+		url("../fonts/BrutalType/BrutalType.woff") format("woff"),
+		url("../fonts/BrutalType/BrutalType.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "TTMed";
+	src: url("../fonts/TTSupermolotNeue-ExpMed/TTSupermolotNeue-ExpMed.woff2")
+			format("woff2"),
+		url("../fonts/TTSupermolotNeue-ExpMed/TTSupermolotNeue-ExpMed.woff")
+			format("woff"),
+		url("../fonts/TTSupermolotNeue-ExpMed/TTSupermolotNeue-ExpMed.ttf")
+			format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}

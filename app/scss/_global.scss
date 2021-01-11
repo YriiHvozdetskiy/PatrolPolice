@@ -1,0 +1,80 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	color: $white;
+	background-color: #e5e5e5;
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: $white;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+//? for workin progressbar
+.wrap {
+	max-width: 1448px;
+	margin: 0 auto;
+}
+.progressbar {
+	position: fixed;
+	top: 0;
+	height: 0%;
+	width: 4px;
+	background: $blue1;
+}
+
+.wrapper {
+	max-width: 1320px;
+	margin: 0 auto;
+}
+
+.common-title {
+	font-family: "TTRegular";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 130%;
+	margin-bottom: 82px;
+	display: flex;
+	justify-content: center;
+}
+
+.common-link a {
+	font-family: "BrutalType";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 150%;
+	color: $blue1;
+	position: relative;
+	&:hover {
+		border-bottom: solid 1px $blue1;
+	}
+	&::before {
+		position: absolute;
+		content: ">";
+		left: -23px;
+	}
+}
